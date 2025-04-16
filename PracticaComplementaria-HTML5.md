@@ -82,9 +82,9 @@ d_
 
 e_
     <form action="#"> 
-    <p>Ingrese un valor entre 1 y 100: 
-    <input type="number" id="valor" name="valor" min="1" max="100"> 
-    </p> 
-    <p><input type="submit" value="Confirmar">
-    </p> 
+        <p>Ingrese un valor entre 1 y 100: 
+        <input type="number" id="valor" name="valor" min="1" max="100"> 
+        </p> 
+        <p><input type="submit" value="Confirmar">
+        </p> 
     </form> 
