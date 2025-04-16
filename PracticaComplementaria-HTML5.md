@@ -28,9 +28,9 @@ a_
     mp3, wav, ogg, au).
 
 b_ 
-<!<audio controls>
+    <audio controls>
   <source src="https://html5tutorial.info/media/vincent.ogg" type="audio/mpeg">
-</audio>
+    </audio>
 
 
 
@@ -39,12 +39,52 @@ a_
     El elemento VIDEO permite mostrar un video sin la necesidad de plugin (Flash). En este momento los navegadores permiten mostrar formatos como el mp4, webm y ogv. 
     FireFox permite mostrar videos en formato ogv (formato de vídeo de código abierto Ogg/Theora).  
 
-b_ ***************************hacer***************************
+b_ 
+    <video 
+        width="720"
+        src="https://videos.pexels.com/video-files/30635084/13112232_2560_1440_60fps.mp4"  
+        controls> 
+    </video>
 
 
 4.
-a_***************************hacer***************************
-b_***************************hacer***************************
-c_***************************hacer***************************
-d_***************************hacer***************************
-e_***************************hacer***************************
+a_ 
+    <form> 
+        <p>Por favor, complete con su nombre  para continuar:
+        </p>
+        <input type="password" id="clave" required> 
+        <br><br>
+        <input type="submit"> 
+    </form> 
+
+b_
+    <form action="#"> 
+        Mail: 
+        <input type="mail" id="mailusuario" required> 
+        <br>
+        <input type="submit" value="Confirmar"> 
+    </form> 
+
+c_  
+    <form action="#"> 
+        <p>Ingrese su dia de nacimiento: <input type="date" id="fecha" name="fecha"> 
+        </p> 
+    </form>
+
+d_
+    <form action="#"> 
+        <p>Seleccione su color favorito: 
+        <input type="color" id="color" name="color"> 
+        </p> 
+        <p><input type="submit" value="Confirmar">
+        </p> 
+    </form> 
+
+e_
+    <form action="#"> 
+    <p>Ingrese un valor entre 1 y 100: 
+    <input type="number" id="valor" name="valor" min="1" max="100"> 
+    </p> 
+    <p><input type="submit" value="Confirmar">
+    </p> 
+    </form> 
