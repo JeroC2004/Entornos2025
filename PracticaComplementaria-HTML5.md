@@ -28,10 +28,17 @@ a_
     mp3, wav, ogg, au).
 
 b_ 
+<<<<<<< HEAD
 
 <audio controls>
   <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
 </audio>
+=======
+<audio controls>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+</audio>
+
+>>>>>>> cbf478e3b8c96e0f475e2712f0bb7c0aa1b5e72a
 
 
 
