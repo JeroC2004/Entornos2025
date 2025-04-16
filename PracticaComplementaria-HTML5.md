@@ -28,15 +28,10 @@ a_
     mp3, wav, ogg, au).
 
 b_ 
-<<<<<<< HEAD
+
 <audio controls>
   <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
 </audio>
-=======
-<!--<audio controls>
-  <source src="https://html5tutorial.info/media/vincent.ogg" type="audio/mpeg">
-</audio>-->
->>>>>>> f02833a498f89327628a7cd467068928706f336a
 
 
 
@@ -45,7 +40,11 @@ a_
     El elemento VIDEO permite mostrar un video sin la necesidad de plugin (Flash). En este momento los navegadores permiten mostrar formatos como el mp4, webm y ogv. 
     FireFox permite mostrar videos en formato ogv (formato de vídeo de código abierto Ogg/Theora).  
 
-b_ ***************************hacer***************************
+b_ <video 
+    width="720"
+    src="https://videos.pexels.com/video-files/1390942/1390942-uhd_2732_1440_24fps.mp4"  
+    controls> 
+</video>
 
 
 4.
