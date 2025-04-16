@@ -27,7 +27,12 @@ a_
     Silverlight o Java. El comité de estandarización W3C deja abierto a cada empresa que desarrolla navegadores los formatos que quieran soportar (así tenemos que algunos soportan 
     mp3, wav, ogg, au).
 
-b_ ***************************hacer***************************
+b_ 
+<audio controls>
+  <source src="https://html5tutorial.info/media/vincent.mp3" type="audio/mpeg">
+  Tu navegador no soporta el elemento de audio.
+</audio>
+
 
 
 3.
