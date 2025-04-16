@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <body>
@@ -9,7 +10,7 @@
             <br>
             <hr>
             <h1>AÑO 2008</h1>
-            <table border="1">
+            <table>
                 <tr>
                     <td style="text-align: center;">Exámenes</td>
                 </tr>
@@ -25,15 +26,23 @@
             <br>
             <br>
             <ol>
-                <li>Enunciado del examen</li> <!--Faltan los enlaces-->
-                <li>Resolucion</li>
+                <li><a href="#enunciado">Enunciado del examen</a></li>
+                <li><a href="https://www.Resoluciónejemplo.com"target="_blank">Resolución</a></li>
             </ol>
             <br>   
             <p>Puede realizar consultas completando el siguiente formulario:</p>
-
-
-
-
+            
+            <form action="mailto:x@x.com" method="post" enctype="text/plain">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+            
+                    <label for="consulta">Consulta:</label><br>
+                    <textarea id="consulta" name="consulta" rows="4" cols="50" required></textarea><br><br>
+            
+            <input type="submit" value="ENVIAR">
+            <input type="reset" value="BORRAR">
+            </form>
+               
             <h3>Enunciado del examen</h3>
             <p>Ejercicio 1:.........................</p>
             <p>............................................</p>
@@ -42,22 +51,9 @@
             <br>
             <br>
             <br>
-            <p>Para mas informacion diragase <a href="contacto@xx.com">aquí</a> </p>
+            <p>Para mas informacion diragase <a href="mailto:contacto@xx.com">aquí</a> </p>
 
-           
 
-            
-            
-    
-          
-            
-        
-        
-        
-        
-        
-        
-        
         
         </body>
 
