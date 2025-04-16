@@ -29,8 +29,7 @@ a_
 
 b_ 
 <audio controls>
-  <source src="https://html5tutorial.info/media/vincent.mp3" type="audio/mpeg">
-  Tu navegador no soporta el elemento de audio.
+  <source src="https://html5tutorial.info/media/vincent.ogg" type="audio/mpeg">
 </audio>
 
 
