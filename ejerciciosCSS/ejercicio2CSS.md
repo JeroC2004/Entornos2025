@@ -3,6 +3,7 @@ p#normal {
     font-size: 11px; 
     font-weight: bold; 
 } 
+
     Se refiere a un elemento <p> cuyo id="normal".
     Efectos:
     font-family: Arial, helvetica. Usa arial, o helvetica si arial no esta disponible.
@@ -14,6 +15,7 @@ p#normal {
     border-color: blue; 
     border-width: 2px; 
 } 
+
     Se refiere a cualquier tipo de elemento con id="destacado".
     Efectos:
     border-style: solid. Tiene un borde de tipo solido.
@@ -24,6 +26,7 @@ p#normal {
     background-color: #9EC7EB; 
     color: red; 
 } 
+
     Se refiere a un elemento con id="distinto".
     Efectos:
     background-color: #9EC7EB. Debe tener un color de fondo azul claro.
@@ -31,13 +34,17 @@ p#normal {
 
 
 <p id="normal">Este es un párrafo</p>
+
     Tomas los efectos de p#normal
 
 <p id="destacado">Este es otro párrafo</p> 
+
     Toma los efectos de *#destacado
 
 <table id="destacado"><tr><td>Esta es una tabla</td></tr></table> 
+
     Sigue tomando los efectos de *#destacado ya que es para cualquier tipo de elemento
 
 <p id="distinto">Este es el último párrafo</p>
+
     Tomas los efectos de #distinto
