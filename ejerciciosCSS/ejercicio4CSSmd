@@ -1,0 +1,32 @@
+- Comparación y análisis:
+
+Primer bloque:
+
+El p tiene una clase contenido y un estilo en línea que establece font-weight: normal.
+La tabla y el enlace están dentro del body, pero el body no tiene ninguna clase aplicada.
+
+Segundo bloque:
+
+El body tiene la clase contenido, lo que significa que cualquier estilo asociado con .contenido se aplicará a todos los elementos dentro del <body>.
+El p no tiene estilos en línea ni clases adicionales.
+
+- Efectos:
+
+Color de los enlaces:
+
+En ambos bloques, los enlaces tendrán colores diferentes según su estado (link, visited, hover, active) debido a las declaraciones CSS.
+
+Estilos de los párrafos:
+
+En el primer bloque, el párrafo tiene un estilo en línea que establece font-weight: normal, lo que puede anular cualquier estilo de clase contenido.
+En el segundo bloque, el párrafo heredará los estilos de la clase contenido aplicada al body.
+
+Estilos de la tabla:
+
+En ambos bloques, la tabla no tiene estilos específicos aplicados, por lo que se verá igual en ambos casos.
+
+- Resumen: 
+
+Primer bloque: El estilo en línea del párrafo puede anular los estilos de la clase contenido, haciendo que el texto del párrafo tenga un peso de fuente normal.
+
+Segundo bloque: La clase contenido aplicada al body afectará a todos los elementos dentro del body, incluyendo el párrafo y la tabla, aplicando cualquier estilo definido para .contenido.
