@@ -1,3 +1,29 @@
 .contenedor{
     background-color: red; 
 }
+.purpura {
+    background-color: #a57ca6ff;
+    height: 200px;
+}
+.rosa {
+    background-color: #f5d9d0ff;
+    height: 1368px;
+}
+.gris {
+    background-color: #9e8e99ff;
+    height: 448px;
+}
+.verde {
+    background-color: #68cc83ff;
+    height: 100px;
+}
+.celeste {
+    background-color: #7c9fccff;
+    height: 324px;
+}
+
+@media (max-width: 576px) {
+    .rosa {
+      height: 200px;
+    }
+}
