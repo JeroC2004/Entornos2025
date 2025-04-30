@@ -12,9 +12,13 @@
     />
 
     <style>
+      .purpura {
+        background-color: #a57ca6ff;
+        height: 200px;
+      }
       .rosa {
         background-color: #f5d9d0ff;
-        height: 100px;
+        height: 564px;
       }
       .gris {
         background-color: #9e8e99ff;
@@ -24,46 +28,59 @@
         background-color: #68cc83ff;
         height: 100px;
       }
+      .celeste {
+        background-color: #7c9fccff;
+        height: 216px;
+      }
+
+      @media (max-width: 576px) {
+        .rosa {
+          height: 200px;
+        }
+      }
     </style>
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
-        <div
-          class="col-12"
-          style="background-color: #a57ca6ff; height: 100px"
-        ></div>
+        <div class="col-12 mb-3">
+          <div class="purpura"></div>
+        </div>
       </div>
 
       <div class="row">
-        <div class="col-3 mb-3">
-          <div class="rosa" style="height: 400px"></div>
+        <div class="col-sm-3 col-12 mb-3">
+          <div class="rosa"></div>
         </div>
-        <div class="col-9">
-          <div class="row mb-3">
-            <div class="col-12">
-              <div class="verde"></div>
+        <div class="col-sm-9 col-12">
+          <div class="verde mb-3"></div>
+
+          <div class="row g-3 mb-3">
+            <div class="col-sm-4 col-6">
+              <div class="gris"></div>
+            </div>
+            <div class="col-sm-4 col-6">
+              <div class="gris"></div>
+            </div>
+            <div class="col-sm-4 col-6">
+              <div class="gris"></div>
+            </div>
+            <div class="col-sm-4 col-6">
+              <div class="gris"></div>
+            </div>
+            <div class="col-sm-4 col-6">
+              <div class="gris"></div>
+            </div>
+            <div class="col-sm-4 col-6">
+              <div class="gris"></div>
             </div>
           </div>
-
-          <div class="row g-3">
-            <div class="col-12 col-sm-4">
-              <div class="gris"></div>
+          <div class="row">
+            <div class="col-sm-4 col-6">
+              <div class="celeste"></div>
             </div>
-            <div class="col-12 col-sm-4">
-              <div class="gris"></div>
-            </div>
-            <div class="col-12 col-sm-4">
-              <div class="gris"></div>
-            </div>
-            <div class="col-12 col-sm-4">
-              <div class="gris"></div>
-            </div>
-            <div class="col-12 col-sm-4">
-              <div class="gris"></div>
-            </div>
-            <div class="col-12 col-sm-4">
-              <div class="gris"></div>
+            <div class="col-sm-8 col-6">
+              <div class="celeste"></div>
             </div>
           </div>
         </div>
