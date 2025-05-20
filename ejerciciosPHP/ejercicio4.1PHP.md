@@ -1,4 +1,4 @@
-1\_
+1
 
     <?php
     function doble($i) {
@@ -34,9 +34,9 @@ Variables:
 
     $d = 12 (Varibale de tipo integer)
 
-    $f = doble($d++) (Varibale de tipo integer) ??????????????
+    $f = doble($d++) (Varibale de tipo integer)
 
-    $g = $f += 10 (Varibale de tipo integer) ??????????????
+    $g = $f += 10 (Varibale de tipo integer)
 
 Operadores:
 
@@ -73,4 +73,4 @@ Salidas por pantalla:
     echo gettype($c) (String)
     echo gettype($d) (Integer)
     echo $a, $b, $c, $d, $f , $g (1xyzxyz184444)
-    igoufdjhuioghdfuhguifdughfduihguifdhuighdfuigifudhgfduhgui
+    en pantalla figura (booleanstringstringinteger1xyzxyz184444)
