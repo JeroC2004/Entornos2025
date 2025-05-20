@@ -1,5 +1,3 @@
-1
-
     <?php
     function doble($i) {
         return $i*2;
