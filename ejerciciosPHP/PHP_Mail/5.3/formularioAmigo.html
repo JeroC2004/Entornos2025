@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FormularioParaInvitarAmigo</title>
+  </head>
+  <body>
+    <form action="compartirAmigo.php" method="post">
+      <fieldset>
+        <p>
+          <label>
+            Nombre <input type="text" name="nombre" size="25" required />
+          </label>
+        </p>
+        <p>
+          <label>
+            Email <input type="email" name="email" size="25" required />
+          </label>
+        </p>
+
+        <p>
+          <label>
+            Email de tu amigo
+            <input type="email" name="emailAmigo" size="25" required />
+          </label>
+        </p>
+        Mensaje para tu amigo:
+        <p>
+          <label>
+            <textarea name="texto" cols="32" rows="6">
+ Este sitio es genial, echale un vistazo</textarea
+            >
+          </label>
+        </p>
+        <input type="hidden" name="pagina" value="http://sitio.html" />
+        <input type="submit" value="Enviar" />
+      </fieldset>
+    </form>
+  </body>
+</html>
