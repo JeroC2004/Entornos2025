@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos.css" />
+    <title>Formulario Alta Usuarios</title>
+  </head>
+  <body>
+    <form action="Alta.php" method="POST" name="FormAlta">
+      <table>
+        <tr>
+          <td>Nombre:</td>
+          <td><input type="TEXT" name="Nom" size="20" maxlength="40" /></td>
+        </tr>
+
+        <tr>
+          <td>Legajo:</td>
+          <td>
+            <input type="PASSWORD" name="Legajo" size="20" maxlength="8" />
+          </td>
+        </tr>
+        <tr>
+          <td>D.N.I::</td>
+          <td><input type="TEXT" name="DNI" size="20" maxlength="20" /></td>
+        </tr>
+        <tr>
+          <td>eMail:</td>
+          <td><input type="TEXT" name="eMail" size="20" maxlength="40" /></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="SUBMIT" name="Submit" value="Agregar" />
+            <p><a href="Menu.html">Volver al menu; del ABM</a></p>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
