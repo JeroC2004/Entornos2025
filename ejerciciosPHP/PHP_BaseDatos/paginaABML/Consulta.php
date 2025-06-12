@@ -2,45 +2,46 @@
 
 <head>
     <title> Listados completo </title>
+    <link rel="stylesheet" href="estilos.css" />
 </head>
 
 <body>
     <?php
     include("conexion.inc");
 
-    $vSql = "SELECT * FROM doc_utn";
+    $vSql = "SELECT * FROM ciudades";
     $vResultado = mysqli_query($link, $vSql);
     $total_registros = mysqli_num_rows($vResultado);
     ?>
-    <table border=1>
+    <table>
         <tr>
-            <td><b>Usuario</b></td>
-            <td><b>DNI</b></td>
-            <td><b>Email</b></td>
+            <td><b>Id</b></td>
+            <td><b>Ciudad</b></td>
+            <td><b>Pais</b></td>
+            <td><b>Habitantes</b></td>
+            <td><b>Superficie</b></td>
+            <td><b>TieneMetro</b></td>
         </tr>
         <?php
         while ($fila = mysqli_fetch_array($vResultado)) {
         ?>
             <tr>
-                <td><?php echo ($fila['apel_nom']); ?></td>
-                <td><?php echo ($fila['dni']); ?></td>
-                <td><?php echo ($fila['email']); ?></td>
-            </tr>
-            <tr>
-                <td colspan="5">
-                <?php
-            }
-            // Liberar conjunto de resultados 
-            mysqli_free_result($vResultado);
-
-            // Cerrar la conexion 
-            mysqli_close($link);
-                ?>
+                <td><?php echo ($fila['Id']); ?></td>
+                <td><?php echo ($fila['Ciudad']); ?></td>
+                <td><?php echo ($fila['Pais']); ?></td>
+                <td><?php echo ($fila['Habitantes']); ?></td>
+                <td><?php echo ($fila['Superficie']); ?></td>
+                <td>
+                    <input type="checkbox" disabled <?php if ($fila['tieneMetro']) echo 'checked'; ?>>
                 </td>
             </tr>
+        <?php
+        }
+        mysqli_free_result($vResultado);
+        mysqli_close($link);
+        ?>
     </table>
-    <p>&nbsp;</p>
-    <p align="center"><a href="Menu.html">Volver al menu; del ABM</a></p>
+    <p style="text-align: center;"><a href="Menu.html">Volver al menu del ABML</a></p>
 </body>
 
 </html>

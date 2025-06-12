@@ -1,47 +1,66 @@
-<title>Modificacion</title>
+<head>
+    <title>Modificacion</title>
+    <link rel="stylesheet" href="estilos.css" />
 </head>
-<boby>
+
+<body>
     <?php
     include("conexion.inc");
-    //Captura datos desde el Form anterior 
-    $vDNI = $_POST['DNI'];
-    //Arma la instrucción SQL y luego la ejecuta 
-    $vSql = "SELECT * FROM doc_utn WHERE dni ='$vDNI' ";
-    $vResultado = mysqli_query($link, $vSql) or die(mysqli_error($link));;
+    $vCiudad = $_POST['Ciudad'];
+    $vPais = $_POST['Pais'];
+    $vSql = "SELECT * FROM ciudades WHERE Ciudad ='$vCiudad' and Pais='$vPais'";
+    $vResultado = mysqli_query($link, $vSql) or die(mysqli_error($link));
     $fila = mysqli_fetch_array($vResultado);
     if (mysqli_num_rows($vResultado) == 0) {
-        echo ("Usuario Inexistente...!!! <br>");
+        echo ("Ciudad Inexistente...!!! <br>");
         echo ("<A href='FormModiIni.html'>Continuar</A>");
     } else {
     ?>
         <FORM action="Modi.php" method="POST" name="FormModi">
-            <table width="356">
+            <input type="hidden" name="CiudadOriginal" value="<?php echo ($fila['Ciudad']); ?>">
+            <input type="hidden" name="PaisOriginal" value="<?php echo ($fila['Pais']); ?>">
+            <table>
                 <tr>
-                    <td width="103"> Nombre: </td>
-                    <td width="243"> <input type="text" name="Nombre" value="<?php
-                                                                                echo ($fila['apel_nom']); ?>">
+                    <td>Ciudad:</td>
+                    <td>
+                        <input
+                            type="text"
+                            name="Ciudad"
+                            size="20"
+                            maxlength="100"
+                            required value="<?php echo ($fila['Ciudad']); ?>">
                     </td>
                 </tr>
                 <tr>
-                    <td width="103"> Ingrese su Legajo: </td>
-                    <td width="243"> <input type="TEXT" name="ClaveUsuario" size="20" maxlength="20"
-                            value="<?php echo ($fila['legajo']); ?>">
+                    <td>Pais:</td>
+                    <td>
+                        <input type="text" name="Pais" size="20" maxlength="100" required value="<?php echo ($fila['Pais']); ?>">
                     </td>
                 </tr>
                 <tr>
-                    <td width="103"> D.N.I.: </td>
-                    <td width="243"> <input type="TEXT" name="DNI" size="20" maxlength="20"
-                            value="<?php echo ($fila['dni']); ?>">
+                    <td>Habitantes:</td>
+                    <td> <input type="number" name="Habitantes" min="0" max="2147483647" step="1" required value="<?php echo ($fila['Habitantes']); ?>">
                     </td>
                 </tr>
                 <tr>
-                    <td width="103"> eMail: </td>
-                    <td width="243"> <input type="TEXT" name="eMail" size="20" maxlength="40"
-                            value="<?php echo ($fila['email']); ?>">
+                    <td>Superficie:</td>
+                    <td>
+                        <input
+                            type="number"
+                            name="Superficie"
+                            step="1"
+                            min="0"
+                            max="99999999.99"
+                            size="20"
+                            required value="<?php echo ($fila['Superficie']); ?>">
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2" align="center"> <input type="SUBMIT" name="Submit"
+                    <td>Tiene Metro:</td>
+                    <td><input type="checkbox" name="Metro" value="1" <?php if ($fila['tieneMetro']) echo 'checked'; ?>>Si </td>
+                </tr>
+                <tr>
+                    <td> <input type="SUBMIT" name="Submit"
                             value="Modificar">
                     </td>
                 </tr>
@@ -49,8 +68,6 @@
         </FORM>
     <?php
     }
-    // Liberar conjunto de resultados 
     mysqli_free_result($vResultado);
-    // Cerrar la conexion 
     mysqli_close($link);
     ?>

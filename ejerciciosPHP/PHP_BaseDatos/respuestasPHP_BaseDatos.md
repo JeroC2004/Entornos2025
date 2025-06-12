@@ -21,14 +21,14 @@
 
 9. while ($fila = mysqli_fetch_array($vResultado)) extrae una fila del resultado como un array, cada iteración representa una fila de la tabla y esta termina cuando ya no haya mas filas
 
-    <tr> 
-        <td><?php echo ($fila[0]); ?></td>           
-        <td><?php echo ($fila[1]); ?></td> 
-        <td><?php echo ($fila[2']); ?></td> 
-    </tr>
-    Por cada fila obtenida, se crea una fila de una tabla HTML. $fila[0], 1 y 2 representan los valoresque tienen las tres primeras columnas de la fila obtenida.
+   <tr> 
+      <td><?php echo ($fila[0]); ?></td>           
+      <td><?php echo ($fila[1]); ?></td> 
+      <td><?php echo ($fila[2']); ?></td> 
+   </tr>
+   Por cada fila obtenida, se crea una fila de una tabla HTML. $fila[0], 1 y 2 representan los valoresque tienen las tres primeras columnas de la fila obtenida.
 
-    <td colspan="5">  se utiliza para que cada celda se extienda a lo largo de 5 columnas de la tabla.
+   <td colspan="5">  se utiliza para que cada celda se extienda a lo largo de 5 columnas de la tabla.
 
    mysqli_free_result($vResultado) se utiliza para liberar la memoria que ocupa el conjunto de resultados.
 

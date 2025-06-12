@@ -1,26 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <link rel="stylesheet" href="estilos.css" />
-    <title>Usuario a modificar</title>
+    <title>Ciudad a modificar</title>
   </head>
-  <body bgcolor="#FFFFFF" text="#000000">
+  <body>
     <form action="FormModi.php" method="POST" name="FormModiIni">
       <table>
         <tr>
-          <td>Usuario a modificar :</td>
-          <td>
-            <input type="TEXT" name="DNI" size="20" maxlength="20" />
+          <td colspan="1">
+            <div class="titulo">Ciudad a modificar</div>
           </td>
         </tr>
         <tr>
-          <td colspan="2" align="center">
-            <input type="SUBMIT" name="Submit" value="Modificar" />
-            <p><a href="Menu.html">Volver al men&uacute; del ABM</a></p>
+          <td>Ciudad:</td>
+          <td>
+            <input
+              type="TEXT"
+              name="Ciudad"
+              size="20"
+              maxlength="100"
+              required
+            />
           </td>
         </tr>
+
+        <tr>
+          <td>Pais:</td>
+          <td>
+            <input type="TEXT" name="Pais" size="20" maxlength="100" required />
+          </td>
+        </tr>
+
+        <td>
+          <input type="SUBMIT" name="Submit" value="Modificar" />
+          <p><a href="Menu.html">Volver al menu del ABML</a></p>
+        </td>
       </table>
     </form>
   </body>

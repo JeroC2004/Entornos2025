@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <link rel="stylesheet" href="estilos.css" />
     <title>Formulario Alta Usuarios</title>
   </head>
@@ -10,28 +11,65 @@
     <form action="Alta.php" method="POST" name="FormAlta">
       <table>
         <tr>
-          <td>Nombre:</td>
-          <td><input type="TEXT" name="Nom" size="20" maxlength="40" /></td>
-        </tr>
-
-        <tr>
-          <td>Legajo:</td>
-          <td>
-            <input type="PASSWORD" name="Legajo" size="20" maxlength="8" />
+          <td colspan="1">
+            <div class="titulo">Ciudad a dar de alta</div>
           </td>
         </tr>
         <tr>
-          <td>D.N.I::</td>
-          <td><input type="TEXT" name="DNI" size="20" maxlength="20" /></td>
+          <td>Ciudad:</td>
+          <td>
+            <input
+              type="text"
+              name="Ciudad"
+              size="20"
+              maxlength="100"
+              required
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>Pais:</td>
+          <td>
+            <input type="text" name="Pais" size="20" maxlength="100" required />
+          </td>
         </tr>
         <tr>
-          <td>eMail:</td>
-          <td><input type="TEXT" name="eMail" size="20" maxlength="40" /></td>
+          <td>Habitantes:</td>
+          <td>
+            <input
+              type="number"
+              name="Habitantes"
+              min="0"
+              max="2147483647"
+              step="1"
+              size="20"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Superficie:</td>
+          <td>
+            <input
+              type="number"
+              name="Superficie"
+              step="1"
+              min="0"
+              max="99999999.99"
+              size="20"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Tiene Metro:</td>
+          <td><input type="checkbox" name="Metro" value="1" /> Sí</td>
         </tr>
         <tr>
           <td>
             <input type="SUBMIT" name="Submit" value="Agregar" />
-            <p><a href="Menu.html">Volver al menu; del ABM</a></p>
+            <p><a href="Menu.html">Volver al menu del ABML</a></p>
           </td>
         </tr>
       </table>

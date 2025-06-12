@@ -7,30 +7,25 @@
 <body>
     <?php
     include("conexion.inc");
-    //Captura datos desde el Form anterior 
-    $vNomApel = $_POST['Nom'];
-    $vLegajo = $_POST['Legajo'];
-    $vDNI = $_POST['DNI'];
-    $vEmail = $_POST['eMail'];
-    //Arma la instrucción SQL y luego la ejecuta 
-    $vSql = "SELECT Count(dni) as canti FROM doc_utn WHERE dni='$vDNI'";
-    $vResultado = mysqli_query($link, $vSql) or die(mysqli_error($link));;
-    $vCantUsuarios = mysqli_fetch_assoc($vResultado);
-    //$vCantUsuarios = mysqli_result($vResultado, 0); 
-    if ($vCantUsuarios['canti'] != 0) {
-        echo ("El Usuario ya Existe<br>");
-        echo ("<A href='Menu.html'>VOLVER AL  ABM</A>");
+    $vCiudad = $_POST['Ciudad'];
+    $vPais = $_POST['Pais'];
+    $vHabitantes = $_POST['Habitantes'];
+    $vSuperficie = $_POST['Superficie'];
+    $vMetro = isset($_POST['Metro']) ? 1 : 0;
+    $vSql = "SELECT COUNT(*) as canti FROM ciudades WHERE Ciudad='$vCiudad' and Pais='$vPais'";
+    $vResultado = mysqli_query($link, $vSql) or die(mysqli_error($link));
+    $vCantCiudades = mysqli_fetch_assoc($vResultado);
+    if ($vCantCiudades['canti'] != 0) {
+        echo ("La ciudad ya Existe<br>");
+        echo ("<A href='Menu.html'>VOLVER AL ABML</A>");
     } else {
-        $vSql = "INSERT INTO doc_utn (legajo, apel_nom, dni, email)  
-values ('$vLegajo','$vNomApel', '$vDNI', '$vEmail')";
+        $vSql = "INSERT INTO ciudades (Ciudad, Pais, Habitantes, Superficie, tieneMetro)  
+VALUES ('$vCiudad', '$vPais', $vHabitantes, $vSuperficie, $vMetro)";
         mysqli_query($link, $vSql) or die(mysqli_error($link));
-        echo ("El Usuario fue Registrado, Pronto recibirás un email, confirmandote la actualizaciòn a 
-nuestra pagina<br>");
+        echo ("La ciudad fue Registrada");
         echo ("<A href='Menu.html'>VOLVER AL MENU</A>");
-        // Liberar conjunto de resultados 
-        mysqli_free_result($vResultado);
     }
-    // Cerrar la conexion 
+    mysqli_free_result($vResultado);
     mysqli_close($link);
     ?></body>
 

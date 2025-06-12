@@ -1,19 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <link rel="stylesheet" href="estilos.css" />
-    <title>Usuario a dar de Baja</title>
+    <title>Ciudad a dar de Baja</title>
   </head>
   <body>
     <form action="Baja.php" method="POST" name="FormBajaIni">
       <table>
         <tr>
-          <td>Usuario a dar de Baja :</td>
+          <td colspan="1">
+            <div class="titulo">Ciudad a dar de baja</div>
+          </td>
+        </tr>
+        <tr>
+          <td>Ciudad:</td>
           <td>
-            <input type="TEXT" name="DNI" size="20" maxlength="20" />
+            <input
+              type="text"
+              name="Ciudad"
+              size="20"
+              maxlength="100"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Pais:</td>
+          <td>
+            <input type="text" name="Pais" size="20" maxlength="100" required />
           </td>
         </tr>
         <tr>
