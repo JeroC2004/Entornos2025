@@ -1,0 +1,45 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilo.css" />
+    <title>Formulario</title>
+  </head>
+
+  <body>
+    <form action="guardarSesion.php" method="post">
+      <table>
+        <tr>
+          <td colspan="2">
+            <div class="titulo">Ingrese su correo</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="Mail">Mail:</label>
+          </td>
+          <td>
+            <input
+              type="email"
+              name="Mail"
+              id="Mail"
+              size="20"
+              maxlength="100"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="FormAlta.html" style="text-align: center">Alta alumno</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: center">
+            <input type="submit" value="Enviar" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

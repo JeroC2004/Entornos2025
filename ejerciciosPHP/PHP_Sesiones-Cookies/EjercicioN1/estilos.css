@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;    /*Estilo bssico del body*/
+  align-items: center;
+  background-color: #FFF8F0;
+  transition: background-color 0.5s ease;
+}
+
+body.atardecer {
+  background-color: #FFDAB9; /*Estilo atardecer del body*/
+}
+
+body.oscuro {
+  background-color: #4B4B50; /*Estilo oscuro del body*/
+}
+
+.theme-toggle {
+  width: 500px;
+  height: 240px;
+  display: flex;    /*Este bloque es para el botón que clickeas para cambiar el modo*/
+  align-items: center;    
+  border-radius: 999px; 
+  background-color: #FFEFD5; 
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+body.atardecer .theme-toggle {
+  background-color: #FFE4B5; /*Este bloque es para que el toggle cambia a atardecer*/
+}
+
+body.oscuro .theme-toggle {
+  background-color: #6B6B70; /*Este bloque es para que el toggle cambia a oscuro*/
+}
+
+.theme-toggle .circle {
+  width: 40%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: #FFF5E1; 
+  transform: translateX(10%); /*Este bloque es el boton dentro del toggle*/
+  position: relative;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body.atardecer .circle {
+  transform: translateX(75%); /*Este bloque es el boton dentro del toggle cambia a atardecer*/
+  background-color: #FFA07A; 
+}
+
+body.oscuro .circle {
+  transform: translateX(140%); /*Este bloque es el boton dentro del toggle cambia a oscuro*/
+  background-color: #3A3A3D; 
+}
+
+.theme-toggle .circle ion-icon.sun {
+  width: 70%;
+  height: 70%;            /*Este bloque es el icono del boton dentro del toggle*/
+  position: absolute;
+  color: #FDB813; 
+  transition: transform 0.5s ease, color 0.5s ease;
+}
+
+body.atardecer .circle ion-icon.sun {   /*Este bloque es el icono del boton dentro del toggle cambia a atardecer*/
+  color: #FCA652; 
+}
+
+body.oscuro .circle ion-icon.sun {    /*Este bloque es el icono del boton dentro del toggle cambia a oscuro*/
+  color: #A9CCE3; 
+}
